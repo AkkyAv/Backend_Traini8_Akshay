@@ -12,7 +12,6 @@ import java.util.List;
 @Data
 public class TrainingCenterRequest {
 
-    @Valid
 
 
     @NotNull(message = "Center name cannot be null")
@@ -26,6 +25,7 @@ public class TrainingCenterRequest {
     @Size(min = 12, max = 12, message = "Center code should be 12 characters")
     private String centerCode;
 
+    @Valid
     @Embedded
     private AddressDto address;
 

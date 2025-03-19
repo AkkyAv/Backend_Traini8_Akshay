@@ -16,15 +16,18 @@ public class TrainingCenter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "Center Name is required")
+    @NotNull(message = "Center Name is required")
     @Size(max=39)
     private String centerName;
 
-    @NotBlank
-    @Pattern(regexp = "^[a-zA-Z0-9]{12}$")
+    @NotBlank(message = "Center Code is required")
+    @Pattern(regexp = "^[a-zA-Z0-9]{12}$", message = "Center Code must be 12 characters long")
     private String centerCode;
 
     @Embedded
+    @NotNull(message = "Address is required")
+    @NotBlank(message = "Address is required")
     private Address address;
 
 

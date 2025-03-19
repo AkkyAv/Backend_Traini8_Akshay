@@ -10,19 +10,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AddressDto {
-    @NotBlank
-    @NotNull
+    @NotBlank(message = "Detailed address is required")
+    @NotNull(message = "Detailed address is required")
     private String detailedAddress;
 
-    @NotBlank
-    @NotNull
+    @NotBlank(message = "City is required")
+    @NotNull(message = "City is required")
     private String city;
 
-    @NotBlank
-    @NotNull
+    @NotBlank(message = "State is required")
+    @NotNull(message = "State is required")
     private String state;
 
-    @NotBlank
-    @NotNull
+    @NotBlank(message = "Pincode is required")
+    @NotNull(message = "Pincode is required")
     private String pincode;
 }
